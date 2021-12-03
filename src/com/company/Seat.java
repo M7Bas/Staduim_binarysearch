@@ -1,12 +1,13 @@
 package com.company;
 
-public class Seat implements Comparable<Seat>{
+public class Seat {
 
-    // Class constructor
+    // Class field
     private final String seatNumber;
     private boolean reserved;
 
-    // Class field
+
+    // Class constructor
     public Seat (String seatNumber){
         this.seatNumber = seatNumber;
         this.reserved = false;
@@ -16,7 +17,6 @@ public class Seat implements Comparable<Seat>{
     public boolean reserve() {
         if (!this.reserved) { // if its reserve return true and display caution message
             this.reserved = true;
-            System.out.println("this Seat is reserved!");
             return true;
         } else {
             return false;
@@ -24,9 +24,8 @@ public class Seat implements Comparable<Seat>{
     }
 
     public boolean cancel(){
-        if (this.reserved) { // if he have no seat to cancel return true.....
+        if (this.reserved) { // if he has no seat to cancel return true.....
             this.reserved = false;
-            System.out.println("This seat is not reserved!");
             return true;
         } else {
             return false;
@@ -37,8 +36,7 @@ public class Seat implements Comparable<Seat>{
         return seatNumber;
     }
 
-    @Override
-    public int compareTo(Seat seat) {
-        return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
+    public int compareTo(String seatNumber) {
+        return this.seatNumber.compareToIgnoreCase(seatNumber);
     }
 }
