@@ -66,7 +66,6 @@ public class Stadium {
                 return midValue; // the seat found.
             }
         }
-        System.out.println("Seat " + seatNumber + " is not there!");
         return null;
     }
 }
