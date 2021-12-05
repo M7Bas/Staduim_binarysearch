@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in); //creating scanner object
-        Stadium stadium = new Stadium("King Fahad", 10, 5000); //creating Stadium object
+        Stadium stadium = new Stadium("King Fahad", 10, 99); //creating Stadium object
         String SeatNum; // initialize Scanner Variable
 
         boolean quit = false; //boolean to control the main loop
